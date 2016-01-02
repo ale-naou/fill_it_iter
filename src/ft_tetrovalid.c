@@ -6,7 +6,7 @@
 /*   By: ale-naou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/16 17:27:51 by ale-naou          #+#    #+#             */
-/*   Updated: 2015/12/31 18:14:19 by fgiraud          ###   ########.fr       */
+/*   Updated: 2016/01/02 18:32:56 by ale-naou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int		ft_testlength(t_struct *global)
 
 	x1 = 1;
 	global->x = 0;
-	if (global->counti == 20 && global->nbrhash != 4)
+	if (global->nbrhash != 4)
 		return (1);
 	else if (global->counti == 20)
 	{
@@ -78,7 +78,7 @@ int				ft_formsvalid(char *buf, t_struct *global)
 			if (buf[global->i + 1] == '\0' && buf[global->i - 1] == '\n')
 				return (1);
 		}
-		if (global->counti == 20)
+		if (global->counti == 20 || global->nbrhash + 4 == 20)
 		{
 			if (ft_testlength(global) != 0)
 				return (1);
